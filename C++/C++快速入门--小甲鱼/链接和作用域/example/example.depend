@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1562906809 source:c:\users\a50j\appdata\local\temp\vmware-a50j\vmwarednd\个人代码\c++基础\链接和作用域\example\that.cpp
+	"header.h"
+
+1562907646 c:\users\a50j\appdata\local\temp\vmware-a50j\vmwarednd\个人代码\c++基础\链接和作用域\example\header.h
+
+1562906897 source:c:\users\a50j\appdata\local\temp\vmware-a50j\vmwarednd\个人代码\c++基础\链接和作用域\example\this.cpp
+	"header.h"
+	<iostream>
+
