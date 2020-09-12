@@ -1,4 +1,4 @@
-//Ê±¼ä£º2019Äê8ÔÂ23ÈÕ23:10:01
+//æ—¶é—´ï¼š2019å¹´8æœˆ23æ—¥23:10:01
 
 #include <iostream>
 #include <string>
@@ -13,12 +13,12 @@ public:
 
 void Cbase::fun(int, int)
 {
-	std::cout << "µ÷ÓÃ»ùÀàfun" << std::endl;
+	std::cout << "è°ƒç”¨åŸºç±»fun" << std::endl;
 }
 
 void Cbase::fun2()
 {
-	std::cout << "µ÷ÓÃ»ùÀàfun2" << std::endl;
+	std::cout << "è°ƒç”¨åŸºç±»fun2" << std::endl;
 }
 
 class Cderived : public Cbase
@@ -30,15 +30,15 @@ public:
 
 void Cderived::fun(int, int)
 {
-	std::cout << "µ÷ÓÃÅÉÉúÀàfun" << std::endl;
+	std::cout << "è°ƒç”¨æ´¾ç”Ÿç±»fun" << std::endl;
 }
 
 void Cderived::fun2()
 {
-	std::cout << "µ÷ÓÃÅÉÉúÀàfun2" << std::endl;
+	std::cout << "è°ƒç”¨æ´¾ç”Ÿç±»fun2" << std::endl;
 }
 
-typedef void(_stdcall * Fun)(int a, int b);
+typedef void(_stdcall * Fun)(int a, int b);       //linuxç¯å¢ƒä¸‹ä¸éœ€è¦_stdcall
 typedef void(_stdcall * Fun2)();
 
 int main()
@@ -52,7 +52,7 @@ int main()
 	std::cout << std::endl;
 
 	cb->fun2();
-	Fun2 f2 = (Fun2)(*((int *)*(int *)cb+1));
+	Fun2 f2 = (Fun2)(*((int *)*(int *)cb+1));       //64ä½ç¯å¢ƒä¸‹intï¼ˆ4ä¸ªå­—èŠ‚ï¼‰è¦æ”¹æˆlongå‹ï¼ˆ8ä¸ªå­—èŠ‚ï¼‰ï¼Œä¸ç„¶å–è™šå‡½æ•°åœ°å€æ—¶åç§»å‡ºé”™
 	f2();
 
 	delete cb;
